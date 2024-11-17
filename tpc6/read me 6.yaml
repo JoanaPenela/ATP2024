@@ -1,0 +1,54 @@
+Este programa implementa um sistema de gestão de turmas escolares, com funcionalidades como criação de turmas, inserção de alunos, consulta, listagem e manipulação de arquivos para armazenar e recuperar informações. Vamos entender as principais partes do código.
+
+Estrutura e Funções
+Estrutura de Dados:
+
+A escola é representada como uma lista de tuplas, onde cada tupla contém:
+Nome da turma (str).
+Lista de alunos na turma (list).
+Cada aluno é uma tupla com:
+Nome do aluno (str).
+ID do aluno (str).
+Notas do aluno (list de inteiros).
+Funções Principais:
+
+a) MostrarMenu:
+Mostra as opções disponíveis para o usuário no terminal.
+b) existeturma(nome_turma, escola):
+Verifica se uma turma existe na escola.
+Retorna True se a turma estiver presente; caso contrário, retorna False.
+c) CriarTurma(nome_turma, escola):
+Cria uma nova turma na escola se ela ainda não existir.
+Adiciona a turma com uma lista vazia de alunos.
+d) inserir_aluno(nome_turma, aluno):
+Insere um aluno em uma turma específica.
+Verifica se a turma existe e se o ID do aluno não está duplicado.
+Adiciona o aluno à lista de alunos da turma.
+e) listar(nome_turma):
+Exibe todos os alunos de uma turma.
+Mostra o nome, ID e notas de cada aluno.
+f) consultar_aluno(id_aluno, nome_turma):
+Procura por um aluno específico em uma turma, usando o ID do aluno.
+Exibe as informações do aluno se encontrado.
+g) guardar_turma(nome_turma, fnome):
+Salva as informações de uma turma em um arquivo de texto.
+Cada linha do arquivo contém um aluno, com nome, ID e notas separados por delimitadores.
+h) recuperar_turma(fnome):
+Lê as informações de uma turma de um arquivo.
+Cria e retorna a lista de alunos recuperada do arquivo.
+Menu Interativo (Menu):
+
+Oferece ao usuário as opções do programa.
+Chama as funções apropriadas com base na escolha do usuário.
+Garante interação contínua até que o usuário decida sair.
+Fluxo do Programa
+O programa exibe o menu com as opções disponíveis.
+O usuário escolhe uma operação:
+Criar uma turma.
+Inserir um aluno.
+Listar alunos de uma turma.
+Consultar informações de um aluno.
+Salvar uma turma em um arquivo.
+Carregar uma turma de um arquivo.
+A função correspondente é executada, e o resultado é exibido no terminal.
+O processo se repete até que o usuário escolha a opção de sair.
